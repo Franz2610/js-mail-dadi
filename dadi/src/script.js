@@ -20,3 +20,19 @@ Consigli del giorno:
 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 */
+
+var nomeUtente = prompt("Inserisci il tuo nome utente per giocare: ");
+
+var dadoUtente =prompt("Inserisci il tuo numero fortunato ");
+var dadoComputer = Math.floor(Math.random() * 6) + 1 ;
+
+
+if (dadoUtente > dadoComputer) {
+  document.getElementById('estrazione').innerHTML = "Hai vinto. oggi è il tuo giorno fortunato. " + nomeUtente + ". Complimenti!";
+} else if(dadoUtente < dadoComputer){
+  document.getElementById('estrazione').innerHTML = "Hai perso. Sarà per la prossima!";
+} else if(dadoUtente = dadoComputer){
+    document.getElementById('estrazione').innerHTML = "Hai pareggiato col computer.";
+}
+
+document.getElementById('numeriEstratti').innerHTML = "Sig. " + nomeUtente + " " + " il tuo numero e'  " + dadoUtente + " e il numero  del computer e' "  + ": " + dadoComputer + ".";
