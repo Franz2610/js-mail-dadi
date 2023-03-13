@@ -8,10 +8,11 @@ btn.addEventListener('click', estrai);
 function estrai(){
     var dadoUtente = Math.floor(Math.random() * 6) + 1;
     var dadoComputer = Math.floor(Math.random() * 6) + 1 ;
-
+  console.log(dadoComputer);
+  console.log(dadoUtente);
 
 if (dadoUtente > dadoComputer) {
-  document.getElementById('estrazione').innerHTML = "Hai vinto. oggi è il tuo giorno fortunato. " + nomeUtente + ". Complimenti!";
+  document.getElementById('estrazione').innerHTML = "Hai vinto. Oggi è il tuo giorno fortunato. " +  ". Complimenti!";
 } else if(dadoUtente < dadoComputer){
   document.getElementById('estrazione').innerHTML = "Hai perso. Sarà per la prossima!";
 } else if(dadoUtente = dadoComputer){
@@ -20,5 +21,6 @@ if (dadoUtente > dadoComputer) {
 
 document.getElementById('numeriEstratti').innerHTML = " Il tuo numero e'  " + dadoUtente + " e il numero  del computer e' "  + ": " + dadoComputer + ".";
 }
+
 
 
